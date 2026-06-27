@@ -271,7 +271,7 @@ Create a Text Asset named:
 
 **Orchestrator_token**
 
-Paste the generated Personal Access Token into the Asset.
+Paste the generated Personal Access Token into the Asset in the same folder where your Incident Mangement Bot files are there.
 
 ---
 
@@ -401,3 +401,5 @@ End
 * Verify the Folder ID in Config.xlsx.
 * Upload both Excel files to OneDrive before execution.
 * Every execution is recorded for complete transparency.
+* Make sure agent priority is set to highest in Orchestrator
+* Make a different folder for Incident Management Flows. Dont Mix it in your real automation folder to avoid loop.
