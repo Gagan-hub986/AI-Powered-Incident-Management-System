@@ -135,20 +135,28 @@ Then predicts:
 
 # 🛠 Technologies Used
 
-| UiPath Components   | External Services  |
-| ------------------- | ------------------ |
-| Maestro BPMN        | Zoho Desk REST API |
-| Studio Web          | Microsoft Outlook  |
-| Agent Builder       | OneDrive           |
-| AI Agent            | Microsoft Excel    |
-| Orchestrator        |                    |
-| Integration Service |                    |
-| Outlook Activities  |                    |
-| HTTP Request        |                    |
-| JSON Activities     |                    |
-| Excel Activities    |                    |
-| Assets              |                    |
-| Event Trigger       |                    |
+| UiPath Components                        | External Services  |
+| -------------------                      | ------------------ |
+| Maestro BPMN                             | Zoho Desk REST API |
+| UiPath Studio Web                        | Microsoft Outlook  |
+| Agent Builder                            | OneDrive           |
+| AI Agent                                 | Microsoft Excel    |
+| Orchestrator                             |                    |
+| UiPath Integration Service               |                    |
+| Outlook Activities                       |                    |
+| UiPath HTTP Request Activities           |                    |
+| JSON Activities                          |                    |
+| Excel Activities                         |                    |
+| UiPath Assets                            |                    |
+| UiPath OneDrive & SharePoint Activities  |                    |
+| UiPath Low-Code AI Agent                 |                    |
+| UiPath Orchestrator REST APIs            |                    |
+| UiPath Outlook 365 Activities            |                    |
+| UiPath OneDrive & SharePoint Activities  |                    |
+| UiPath Event Trigger                     |                    |
+| UiPath JSON Activities                   |                    |
+| UiPath Variables & Arguments             |                    |
+| API Workflows                            |                    |
 
 ---
 
