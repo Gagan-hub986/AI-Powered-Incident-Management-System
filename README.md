@@ -112,6 +112,18 @@ Records         │
 
 ---
 
+## Agent Type
+
+This solution utilizes a **Low-Code AI Agent** developed using **UiPath Agent Builder**.
+
+The AI Agent analyzes UiPath Orchestrator job details, execution logs, and bot knowledge base information to perform root cause analysis, identify the responsible developer, determine ticket priority, estimate the expected resolution time, and recommend possible resolutions.
+
+**Coded Agents:** Not Used
+
+**Low-Code AI Agents:** Used
+
+---
+
 # 🧠 AI Agent Responsibilities
 
 The Low-Code AI Agent analyzes:
@@ -179,7 +191,20 @@ Incident Management
 ```
 
 ---
+## Setup Instructions
+Follow these step to run solution on your system:
+1.Download/Extract the project.
+2.Upload Config.xlsx and Bot Data.xlsx to OneDrive.
+3.Import all .uis workflows into UiPath Studio Web.
+4.Import the Maestro BPMN workflow.
+5.Create Outlook, OneDrive, and Zoho Desk connections.
+6.Generate an Orchestrator Personal Access Token.
+7.Create the Orchestrator_token Asset.
+8.Update Config.xlsx.
+9.Configure the Outlook Event Trigger.
+10.Publish and run the solution.
 
+---
 # ⚙ Workflow Details
 
 ## 1️⃣ Incident Management Bot Data and Config
