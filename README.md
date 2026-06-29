@@ -9,7 +9,6 @@
 ![Studio Web](https://img.shields.io/badge/Studio-Web-success)
 ![Zoho Desk](https://img.shields.io/badge/Zoho-Desk-red)
 ![Outlook](https://img.shields.io/badge/Outlook-365-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
