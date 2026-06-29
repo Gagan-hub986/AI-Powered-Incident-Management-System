@@ -17,6 +17,19 @@
 </div>
 
 ---
+# Project Description
+
+The AI-Powered Incident Management System is an intelligent automation solution developed using UiPath Maestro, UiPath Studio Web, UiPath Agent Builder, Low-Code AI Agent, UiPath Orchestrator REST APIs, and Zoho Desk APIs. The solution automates the complete incident management lifecycle for unattended UiPath automations by continuously monitoring the latest completed Orchestrator jobs, analyzing execution logs using AI, identifying failures and their root causes, creating incident tickets, notifying the responsible developer, and maintaining a centralized execution history.
+
+Unlike traditional incident management processes that require manual investigation of robot logs and ticket creation, this solution leverages an AI Agent to perform intelligent failure analysis and automate decision-making. The result is faster incident resolution, reduced manual effort, improved operational visibility, and increased reliability of enterprise automation processes.
+
+---
+
+# Problem Statement
+
+Organizations often operate hundreds of unattended automation processes that execute critical business operations. When an automation fails, support teams must manually monitor UiPath Orchestrator, review execution logs, identify the root cause, determine the responsible developer, create an incident ticket, and notify stakeholders. This manual process is repetitive, time-consuming, and prone to human error, leading to increased Mean Time to Resolution (MTTR), operational delays, and reduced business productivity.
+
+---
 
 # 📌 Overview
 
