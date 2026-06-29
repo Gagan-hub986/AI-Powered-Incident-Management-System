@@ -191,18 +191,208 @@ Incident Management
 ```
 
 ---
-## Setup Instructions
-Follow these step to run solution on your system:
-1.Download/Extract the project.
-2.Upload Config.xlsx and Bot Data.xlsx to OneDrive.
-3.Import all .uis workflows into UiPath Studio Web.
-4.Import the Maestro BPMN workflow.
-5.Create Outlook, OneDrive, and Zoho Desk connections.
-6.Generate an Orchestrator Personal Access Token.
-7.Create the Orchestrator_token Asset.
-8.Update Config.xlsx.
-9.Configure the Outlook Event Trigger.
-10.Publish and run the solution.
+# 🚀 Setup Instructions
+
+Follow the steps below to configure and run the **AI-Powered Incident Management System**.
+
+---
+
+## 📋 Prerequisites
+
+Before starting, ensure you have access to:
+
+* ✅ UiPath Automation Cloud Account
+* ✅ UiPath Studio Web
+* ✅ UiPath Maestro
+* ✅ UiPath Orchestrator
+* ✅ Microsoft Outlook 365 Account
+* ✅ Microsoft OneDrive Account
+* ✅ Zoho Desk Account
+* ✅ Required permissions to create Orchestrator Assets and API Tokens
+
+---
+
+## Step 1: Download the Project
+
+1. Download or clone this GitHub repository.
+2. Extract the ZIP file to your local machine.
+
+---
+
+## Step 2: Upload the Excel Files
+
+Upload the following files to your **Microsoft OneDrive**:
+
+* `Config.xlsx`
+* `Bot Data.xlsx`
+
+> **Note:** These files are used by the workflows during execution.
+
+---
+
+## Step 3: Import the UiPath Workflows
+
+1. Open **UiPath Studio Web**.
+2. Click **Create New**.
+3. Click the **▼** arrow next to **Create New**.
+4. Select **Import**.
+5. Import all the `.uis` workflow files included in the project.
+
+---
+
+## Step 4: Configure OneDrive Connection
+
+1. Open the **Incident Management Bot Data and Config** workflow.
+2. Replace the existing **OneDrive connection** with your own connection.
+3. Save the workflow.
+
+---
+
+## Step 5: Update the Configuration File
+
+Open **Config.xlsx** and update the following values:
+
+* Cloud Name
+* Organization Name
+* Tenant Name
+* Folder ID
+* Bot Data Path
+* Bot Data Sheet Name
+* Notification Settings (if required)
+
+Save the file after updating the configuration.
+
+---
+
+## Step 6: Configure the Bot Data Path
+
+1. Copy the sharing link of **Bot Data.xlsx** from OneDrive.
+2. Open **Config.xlsx**.
+3. Paste the copied link into the **Bot Data Path** field.
+4. Save the file.
+
+---
+
+## Step 7: Create Required Connections
+
+Create and authorize the following connections in UiPath:
+
+* Microsoft Outlook 365
+* Microsoft OneDrive
+* Zoho Desk
+
+Replace all existing project connections with your own authenticated connections.
+
+---
+
+## Step 8: Generate an Orchestrator Personal Access Token
+
+1. Open **UiPath Automation Cloud**.
+2. Navigate to **Orchestrator**.
+3. Click your **Profile** icon.
+4. Select **Preferences**.
+5. Open **Personal Access Tokens**.
+6. Click **Create Token**.
+7. Copy the generated token.
+
+---
+
+## Step 9: Create the Orchestrator Asset
+
+In the same Orchestrator folder where the project is deployed:
+
+1. Create a new **Text Asset**.
+2. Name the Asset:
+
+```text
+Orchestrator_token
+```
+
+3. Paste the generated Personal Access Token as the Asset value.
+4. Save the Asset.
+
+---
+
+## Step 10: Verify Asset Configuration
+
+Open the **Incident Management Orchestrator Data** workflow and ensure the **Get Asset** activity is configured to retrieve:
+
+```text
+Orchestrator_token
+```
+
+from the correct Orchestrator folder.
+
+---
+
+## Step 11: Import the Maestro Workflow
+
+Import the provided **Incident Management Maestro BPMN** file into UiPath Maestro.
+
+---
+
+## Step 12: Configure the Outlook Event Trigger
+
+If you want to monitor a different mailbox or Outlook folder:
+
+1. Open the Maestro BPMN.
+2. Select the **Email Received** Event.
+3. Open the **Tools** panel.
+4. Select your Outlook account.
+5. Choose the mailbox and folder to monitor.
+6. Save and publish the workflow.
+
+---
+
+## Step 13: Publish the Solution
+
+After completing all configurations:
+
+1. Publish all UiPath workflows.
+2. Publish the Maestro BPMN.
+3. Ensure all connections and Assets are correctly configured.
+
+---
+
+## Step 14: Execute the Solution
+
+1. Send a new email to the configured Outlook mailbox.
+2. The Outlook Event Trigger will automatically start the Maestro workflow.
+3. The solution will:
+
+   * Read the configuration
+   * Fetch the latest completed Orchestrator job
+   * Retrieve execution logs
+   * Analyze the execution using the AI Agent
+   * Create a Zoho Desk ticket (if the job fails)
+   * Notify the responsible developer
+   * Update the centralized execution history
+
+---
+
+# ✅ Verification Checklist
+
+Before running the solution, verify the following:
+
+* [ ] All `.uis` workflows are imported.
+* [ ] Maestro BPMN is imported and published.
+* [ ] `Config.xlsx` and `Bot Data.xlsx` are uploaded to OneDrive.
+* [ ] OneDrive, Outlook, and Zoho Desk connections are configured.
+* [ ] `Orchestrator_token` Asset is created.
+* [ ] Folder ID is correctly configured.
+* [ ] All required permissions are granted.
+* [ ] The Outlook Event Trigger is enabled.
+
+---
+
+# ⚠️ Important Notes
+
+* Always publish the latest version of the Maestro workflow after making any changes.
+* Ensure all external connections are replaced with your own authenticated connections before execution.
+* Store the Personal Access Token securely and avoid sharing it publicly.
+* Create a dedicated Orchestrator folder for this solution to prevent accidental execution loops with production automations.
+* Every execution (successful or failed) is automatically recorded in the centralized execution history for auditing and reporting purposes.
+
 
 ---
 # ⚙ Workflow Details
